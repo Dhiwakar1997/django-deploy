@@ -11,12 +11,13 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
+print('os module imported')
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-TEMPLATE_DIR=os.path.join(BASE_DIR,'templates')
+TEMPLATE_DIR = os.path.join(BASE_DIR, 'templates')
 
-STATIC_DIR=os.path.join(BASE_DIR,'static')
+STATIC_DIR = os.path.join(BASE_DIR, 'static')
 
 
 # Quick-start development settings - unsuitable for production
@@ -28,7 +29,7 @@ SECRET_KEY = '87$g%7=egygbxz(b723jlvp2_k__e*hvf=z8^ay0q29!odc#b&'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['web-django-test.el.r.appspot.com','127.0.0.1']
+ALLOWED_HOSTS = ['web-django-test.el.r.appspot.com', '127.0.0.1']
 
 
 # Application definition
@@ -96,16 +97,16 @@ else:
     #     $ cloud_sql_proxy -instances=[INSTANCE_CONNECTION_NAME]=tcp:3306
     #
     # See https://cloud.google.com/sql/docs/mysql-connect-proxy
-   DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'message-box',  # NAME OF THE DATA BASE
-        'USER': 'postgres',  # NAME OF THE USER
-        'PASSWORD': 'dudeicui4cu',
-        'HOST': 'localhost',
-        'PORT': '5432',
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql',
+            'NAME': 'message-box',  # NAME OF THE DATA BASE
+            'USER': 'postgres',  # NAME OF THE USER
+            'PASSWORD': 'dudeicui4cu',
+            'HOST': 'localhost',
+            'PORT': '5432',
+        }
     }
-}
 
 
 # Password validation
@@ -145,7 +146,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT='/static/'
-STATICFILES_DIRS=[
+STATIC_ROOT = '/static/'
+STATICFILES_DIRS = [
     STATIC_DIR,
 ]
